@@ -24,14 +24,7 @@ class Day1Exercise2
         $fileContent = file_get_contents($filepath);
         $lines = explode("\n", $fileContent);
         $correctedLines = array_map($this->correctStringOnNumberWrittenAsLetters(...), $lines);
-//        for ($i = 0; $i < 1000; $i++) {
-//            $aline = $lines[$i];
-//            $acorrectedLine = $correctedLines[$i];
-//            $acalibration = $this->calibrationComputer->getLineCalibration($acorrectedLine);
-//            $test = 1;
-//        }
         $linesCalibrations = array_map($this->calibrationComputer->getLineCalibration(...), $correctedLines);
-//        var_dump($linesCalibrations);
 
         return array_sum($linesCalibrations);
     }

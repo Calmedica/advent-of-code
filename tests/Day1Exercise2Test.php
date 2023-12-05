@@ -49,6 +49,6 @@ class Day1Exercise2Test extends TestCase
         $sut = new Day1Exercise2(new Day1Exercise1());
         $result = $sut->correctedCalibrationsForFile(__DIR__ . '/fixtures/Day1Exercise1/realData');
         $this->expectNotToPerformAssertions();
-        var_dump($result);
+//        var_dump($result);
     }
 }
